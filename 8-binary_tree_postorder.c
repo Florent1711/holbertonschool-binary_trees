@@ -8,7 +8,7 @@
  * Return: nothing
  */
 
-void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
+void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 {
 	if (tree == NULL || func == NULL)
 		return;
@@ -17,5 +17,5 @@ void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
 	/*Traverse the right subtree in post-order*/
 	binary_tree_postorder(tree->right, func);
 	/*Apply the function to the current node*/
-	func(tree->value);
+	func(tree->n);
 }
